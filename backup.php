@@ -22,15 +22,15 @@ if ($conn->connect_error) {
 }
 
 
-$email = $_POST['ee'];
-$phone = $_POST['ph'];
-$fullname = $_POST['na'];
-$address = $_POST['ad'];
-$city = $_POST['ci'];
-$country = $_POST['co'];
-$zip = $_POST['zi'];
-$v1 = $_POST['n1'];
-$v2 = $_POST['n2'];
+$email = $_GET['ee'];
+$phone = $_GET['ph'];
+$fullname = $_GET['na'];
+$address = $_GET['ad'];
+$city = $_GET['ci'];
+$country = $_GET['co'];
+$zip = $_GET['zi'];
+$v1 = $_GET['n1'];
+$v2 = $_GET['n2'];
 $total = 0;
 
 
@@ -70,12 +70,12 @@ echo "</div>";
 $conn->close();
 ?>
 <center>
-<form method="post" action="index.php">
+<form method="get" action="index.php">
 	<button class = "btn-primary">Go Back!</button>
 </form>
 <br><br>
 <div style="background-color: rgb(232,225,153);width: 500px;height: 90px;">To see the Complete Purchase list from DataBase, click Retrieval<br><br>
-	<form action="retrieval.php" method="post">
+	<form action="retrieval.php" method="get">
 		<button class="btn-primary">Retrieval</button>
    	</form>
 </div>
